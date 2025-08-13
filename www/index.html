@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قرون - تبدیل واحد پول ایران</title>
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoi2YLYsdmI2YYgLSDYqtio2K/bjNmEINmI2KfYrdivINm+2YjZhCDYp9uM2LHYp9mGIiwic2hvcnRfbmFtZSI6ItmC2LHZiNmGIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmZmZmZmYiLCJ0aGVtZV9jb2xvciI6IiM0Zjg1ZjQiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFJQUFBQUNBQ0FZQUFBQ0hsaTRuQUFBQUJuSkxSMFFBQUFBQUFBRC82d2NBQUFBSmNFaFpjd0FEERFBQUFBREFEZU1MVXdNQUFBQW9TVVJCVkhnQk5Zd0RRc2xYTXdJQXBVZ0xMaUhucWtIYSIsInNpemVzIjoiMTkyeDE5MiIsInR5cGUiOiJpbWFnZS9wbmcifV19">
+<meta name="theme-color" content="#4f85f4">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Vazirmatn', 'Vazir', 'Tahoma', Arial, sans-serif;
+min-height: 100vh;
+padding: 20px;
+direction: rtl;
+position: relative;
+overflow-x: hidden;
+}
+
+/* Theme Loading Animation Overlay */
+.theme-loading-overlay {
+position: fixed;
+top: -100vh;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: 9999;
+pointer-events: none;
+transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.theme-loading-overlay.animate {
+transform: translateY(100vh);
+}
+
+/* Default Theme - Blue Harmony */
+.theme-default {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: #1a202c;
+transition: all 0.3s ease;
+}
+
+.theme-default .theme-loading-overlay {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.theme-default .container {
+background: #ffffff;
+color: #2d3748;
+}
+
+.theme-default .header {
+background: linear-gradient(45deg, #4f85f4, #3b6aef);
+color: #ffffff;
+}
+
+.theme-default .input-wrapper {
+border: 2px solid #e2e8f0;
+background: #f7fafc;
+}
+
+.theme-default .input-wrapper:focus-within {
+border-color: #4f85f4;
+box-shadow: 0 0 0 3px rgba(79, 133, 244, 0.1);
+}
+
+.theme-default input {
+background: transparent;
+color: #2d3748;
+}
+
+.theme-default .copy-btn {
+color: #718096;
+}
+
+.theme-default .copy-btn:hover {
+color: #4f85f4;
+background: rgba(79, 133, 244, 0.1);
+}
+
+.theme-default .result {
+background: #edf2f7;
+color: #2d3748;
+}
+
+.theme-default .result-label {
+color: #4a5568;
+}
+
+.theme-default .result-value {
+color: #1a202c;
+}
+
+.theme-default .formula-info {
+background: #ebf8ff;
+border-left: 4px solid #4299e1;
+color: #2b6cb0;
+}
+
+.theme-default .formula-info h3 {
+color: #2c5282;
+}
+
+.theme-default label {
+color: #4a5568;
+}
+
+.theme-default .dropdown-menu {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.theme-default .dropdown-item {
+color: #4a5568;
+}
+
+.theme-default .dropdown-item:hover {
+background: #f7fafc;
+color: #2d3748;
+}
+
+.theme-default .hamburger-menu {
+background: rgba(255, 255, 255, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: #ffffff;
+}
+
+.theme-default .theme-grid-divider {
+border-top: 1px solid #e2e8f0;
+}
+
+.theme-default .about-modal {
+background: #ffffff;
+color: #2d3748;
+}
+
+.theme-default .modal-overlay {
+background: rgba(0, 0, 0, 0.5);
+}
+
+.theme-default .close-modal-btn {
+color: #4a5568;
+}
+
+.theme-default .close-modal-btn:hover {
+color: #2d3748;
+}
+
+.theme-default .about-title {
+color: #4f85f4;
+}
+
+.theme-default .about-content {
+color: #4a5568;
+}
+
+.theme-default .developers {
+color: #2c5282;
+background: #ebf8ff;
+}
+
+/* Dark Theme - Dark Harmony */
+.theme-dark {
+background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+color: #f1f5f9;
+transition: all 0.3s ease;
+}
+
+.theme-dark .theme-loading-overlay {
+background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.theme-dark .container {
+background: #1e293b;
+color: #f1f5f9;
+}
+
+.theme-dark .header {
+background: linear-gradient(45deg, #334155, #1e293b);
+color: #f1f5f9;
+}
+
+.theme-dark .input-wrapper {
+border: 2px solid #475569;
+background: #334155;
+}
+
+.theme-dark .input-wrapper:focus-within {
+border-color: #6366f1;
+box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.theme-dark input {
+background: transparent;
+color: #f1f5f9;
+}
+
+.theme-dark input::placeholder {
+color: #94a3b8;
+}
+
+.theme-dark .copy-btn {
+color: #94a3b8;
+}
+
+.theme-dark .copy-btn:hover {
+color: #6366f1;
+background: rgba(99, 102, 241, 0.1);
+}
+
+.theme-dark .result {
+background: #334155;
+color: #f1f5f9;
+}
+
+.theme-dark .result-item {
+border-bottom: 1px solid #475569;
+}
+
+.theme-dark .result-label {
+color: #cbd5e1;
+}
+
+.theme-dark .result-value {
+color: #f1f5f9;
+}
+
+.theme-dark .formula-info {
+background: #1e3a8a;
+border-left: 4px solid #3b82f6;
+color: #bfdbfe;
+}
+
+.theme-dark .formula-info h3 {
+color: #93c5fd;
+}
+
+.theme-dark label {
+color: #cbd5e1;
+}
+
+.theme-dark .dropdown-menu {
+background: #1e293b;
+border: 1px solid #475569;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.theme-dark .dropdown-item {
+color: #cbd5e1;
+}
+
+.theme-dark .dropdown-item:hover {
+background: #334155;
+color: #f1f5f9;
+}
+
+.theme-dark .hamburger-menu {
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.2);
+color: #f1f5f9;
+}
+
+.theme-dark .theme-grid-divider {
+border-top: 1px solid #475569;
+}
+
+.theme-dark .about-modal {
+background: #1e293b;
+color: #f1f5f9;
+}
+
+.theme-dark .modal-overlay {
+background: rgba(0, 0, 0, 0.7);
+}
+
+.theme-dark .close-modal-btn {
+color: #cbd5e1;
+}
+
+.theme-dark .close-modal-btn:hover {
+color: #f1f5f9;
+}
+
+.theme-dark .about-title {
+color: #6366f1;
+}
+
+.theme-dark .about-content {
+color: #cbd5e1;
+}
+
+.theme-dark .developers {
+color: #93c5fd;
+background: #1e3a8a;
+}
+
+/* Green Theme - Nature Harmony */
+.theme-green {
+background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+color: #064e3b;
+transition: all 0.3s ease;
+}
+
+.theme-green .theme-loading-overlay {
+background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+}
+
+.theme-green .container {
+background: #f0fdf4;
+color: #064e3b;
+}
+
+.theme-green .header {
+background: linear-gradient(45deg, #059669, #047857);
+color: #ffffff;
+}
+
+.theme-green .input-wrapper {
+border: 2px solid #bbf7d0;
+background: #f0fdf4;
+}
+
+.theme-green .input-wrapper:focus-within {
+border-color: #10b981;
+box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.theme-green input {
+background: transparent;
+color: #064e3b;
+}
+
+.theme-green .copy-btn {
+color: #16a34a;
+}
+
+.theme-green .copy-btn:hover {
+color: #10b981;
+background: rgba(16, 185, 129, 0.1);
+}
+
+.theme-green .result {
+background: #dcfce7;
+color: #064e3b;
+}
+
+.theme-green .result-label {
+color: #166534;
+}
+
+.theme-green .result-value {
+color: #064e3b;
+}
+
+.theme-green .formula-info {
+background: #ecfdf5;
+border-left: 4px solid #10b981;
+color: #047857;
+}
+
+.theme-green .formula-info h3 {
+color: #059669;
+}
+
+.theme-green label {
+color: #166534;
+}
+
+.theme-green .dropdown-menu {
+background: #f0fdf4;
+border: 1px solid #bbf7d0;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.theme-green .dropdown-item {
+color: #166534;
+}
+
+.theme-green .dropdown-item:hover {
+background: #dcfce7;
+color: #064e3b;
+}
+
+.theme-green .hamburger-menu {
+background: rgba(255, 255, 255, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: #ffffff;
+}
+
+.theme-green .theme-grid-divider {
+border-top: 1px solid #bbf7d0;
+}
+
+.theme-green .about-modal {
+background: #f0fdf4;
+color: #064e3b;
+}
+
+.theme-green .modal-overlay {
+background: rgba(0, 0, 0, 0.5);
+}
+
+.theme-green .close-modal-btn {
+color: #166534;
+}
+
+.theme-green .close-modal-btn:hover {
+color: #064e3b;
+}
+
+.theme-green .about-title {
+color: #10b981;
+}
+
+.theme-green .about-content {
+color: #166534;
+}
+
+.theme-green .developers {
+color: #059669;
+background: #ecfdf5;
+}
+
+/* Orange Theme - Warm Harmony */
+.theme-orange {
+background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+color: #7c2d12;
+transition: all 0.3s ease;
+}
+
+.theme-orange .theme-loading-overlay {
+background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+}
+
+.theme-orange .container {
+background: #fff7ed;
+color: #7c2d12;
+}
+
+.theme-orange .header {
+background: linear-gradient(45deg, #f97316, #ea580c);
+color: #ffffff;
+}
+
+.theme-orange .input-wrapper {
+border: 2px solid #fed7aa;
+background: #fff7ed;
+}
+
+.theme-orange .input-wrapper:focus-within {
+border-color: #f97316;
+box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.theme-orange input {
+background: transparent;
+color: #7c2d12;
+}
+
+.theme-orange .copy-btn {
+color: #ea580c;
+}
+
+.theme-orange .copy-btn:hover {
+color: #f97316;
+background: rgba(249, 115, 22, 0.1);
+}
+
+.theme-orange .result {
+background: #ffedd5;
+color: #7c2d12;
+}
+
+.theme-orange .result-label {
+color: #c2410c;
+}
+
+.theme-orange .result-value {
+color: #7c2d12;
+}
+
+.theme-orange .formula-info {
+background: #fff7ed;
+border-left: 4px solid #f97316;
+color: #c2410c;
+}
+
+.theme-orange .formula-info h3 {
+color: #ea580c;
+}
+
+.theme-orange label {
+color: #c2410c;
+}
+
+.theme-orange .dropdown-menu {
+background: #fff7ed;
+border: 1px solid #fed7aa;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.theme-orange .dropdown-item {
+color: #c2410c;
+}
+
+.theme-orange .dropdown-item:hover {
+background: #ffedd5;
+color: #7c2d12;
+}
+
+.theme-orange .hamburger-menu {
+background: rgba(255, 255, 255, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: #ffffff;
+}
+
+.theme-orange .theme-grid-divider {
+border-top: 1px solid #fed7aa;
+}
+
+.theme-orange .about-modal {
+background: #fff7ed;
+color: #7c2d12;
+}
+
+.theme-orange .modal-overlay {
+background: rgba(0, 0, 0, 0.5);
+}
+
+.theme-orange .close-modal-btn {
+color: #c2410c;
+}
+
+.theme-orange .close-modal-btn:hover {
+color: #7c2d12;
+}
+
+.theme-orange .about-title {
+color: #f97316;
+}
+
+.theme-orange .about-content {
+color: #c2410c;
+}
+
+.theme-orange .developers {
+color: #ea580c;
+background: #fff7ed;
+}
+
+/* Purple Theme - Royal Harmony */
+.theme-purple {
+background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+color: #581c87;
+transition: all 0.3s ease;
+}
+
+.theme-purple .theme-loading-overlay {
+background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+}
+
+.theme-purple .container {
+background: #faf5ff;
+color: #581c87;
+}
+
+.theme-purple .header {
+background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+color: #ffffff;
+}
+
+.theme-purple .input-wrapper {
+border: 2px solid #e9d5ff;
+background: #faf5ff;
+}
+
+.theme-purple .input-wrapper:focus-within {
+border-color: #8b5cf6;
+box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.theme-purple input {
+background: transparent;
+color: #581c87;
+}
+
+.theme-purple .copy-btn {
+color: #7c3aed;
+}
+
+.theme-purple .copy-btn:hover {
+color: #8b5cf6;
+background: rgba(139, 92, 246, 0.1);
+}
+
+.theme-purple .result {
+background: #f3e8ff;
+color: #581c87;
+}
+
+.theme-purple .result-label {
+color: #7c3aed;
+}
+
+.theme-purple .result-value {
+color: #581c87;
+}
+
+.theme-purple .formula-info {
+background: #f3e8ff;
+border-left: 4px solid #8b5cf6;
+color: #7c3aed;
+}
+
+.theme-purple .formula-info h3 {
+color: #7c3aed;
+}
+
+.theme-purple label {
+color: #7c3aed;
+}
+
+.theme-purple .dropdown-menu {
+background: #faf5ff;
+border: 1px solid #e9d5ff;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.theme-purple .dropdown-item {
+color: #7c3aed;
+}
+
+.theme-purple .dropdown-item:hover {
+background: #f3e8ff;
+color: #581c87;
+}
+
+.theme-purple .hamburger-menu {
+background: rgba(255, 255, 255, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: #ffffff;
+}
+
+.theme-purple .theme-grid-divider {
+border-top: 1px solid #e9d5ff;
+}
+
+.theme-purple .about-modal {
+background: #faf5ff;
+color: #581c87;
+}
+
+.theme-purple .modal-overlay {
+background: rgba(0, 0, 0, 0.5);
+}
+
+.theme-purple .close-modal-btn {
+color: #7c3aed;
+}
+
+.theme-purple .close-modal-btn:hover {
+color: #581c87;
+}
+
+.theme-purple .about-title {
+color: #8b5cf6;
+}
+
+.theme-purple .about-content {
+color: #7c3aed;
+}
+
+.theme-purple .developers {
+color: #7c3aed;
+background: #f3e8ff;
+}
+
+/* Rose Theme - Romantic Harmony */
+.theme-rose {
+background: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%);
+color: #881337;
+transition: all 0.3s ease;
+}
+
+.theme-rose .theme-loading-overlay {
+background: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%);
+}
+
+.theme-rose .container {
+background: #fff1f2;
+color: #881337;
+}
+
+.theme-rose .header {
+background: linear-gradient(45deg, #f43f5e, #e11d48);
+color: #ffffff;
+}
+
+.theme-rose .input-wrapper {
+border: 2px solid #fecdd3;
+background: #fff1f2;
+}
+
+.theme-rose .input-wrapper:focus-within {
+border-color: #f43f5e;
+box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.1);
+}
+
+.theme-rose input {
+background: transparent;
+color: #881337;
+}
+
+.theme-rose .copy-btn {
+color: #be185d;
+}
+
+.theme-rose .copy-btn:hover {
+color: #f43f5e;
+background: rgba(244, 63, 94, 0.1);
+}
+
+.theme-rose .result {
+background: #ffe4e6;
+color: #881337;
+}
+
+.theme-rose .result-label {
+color: #be185d;
+}
+
+.theme-rose .result-value {
+color: #881337;
+}
+
+.theme-rose .formula-info {
+background: #ffe4e6;
+border-left: 4px solid #f43f5e;
+color: #be185d;
+}
+
+.theme-rose .formula-info h3 {
+color: #e11d48;
+}
+
+.theme-rose label {
+color: #be185d;
+}
+
+.theme-rose .dropdown-menu {
+background: #fff1f2;
+border: 1px solid #fecdd3;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.theme-rose .dropdown-item {
+color: #be185d;
+}
+
+.theme-rose .dropdown-item:hover {
+background: #ffe4e6;
+color: #881337;
+}
+
+.theme-rose .hamburger-menu {
+background: rgba(255, 255, 255, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: #ffffff;
+}
+
+.theme-rose .theme-grid-divider {
+border-top: 1px solid #fecdd3;
+}
+
+.theme-rose .about-modal {
+background: #fff1f2;
+color: #881337;
+}
+
+.theme-rose .modal-overlay {
+background: rgba(0, 0, 0, 0.5);
+}
+
+.theme-rose .close-modal-btn {
+color: #be185d;
+}
+
+.theme-rose .close-modal-btn:hover {
+color: #881337;
+}
+
+.theme-rose .about-title {
+color: #f43f5e;
+}
+
+.theme-rose .about-content {
+color: #be185d;
+}
+
+.theme-rose .developers {
+color: #e11d48;
+background: #ffe4e6;
+}
+
+/* Base Layout */
+.container {
+max-width: 500px;
+margin: 0 auto;
+border-radius: 20px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+overflow: hidden;
+transition: all 0.3s ease;
+}
+
+.header {
+padding: 30px 20px 20px 20px;
+text-align: center;
+position: relative;
+transition: all 0.3s ease;
+}
+
+.header h1 {
+font-size: 1.8rem;
+margin-bottom: 5px;
+font-weight: 700;
+}
+
+.header .subtitle {
+font-size: 1rem;
+margin-bottom: 10px;
+opacity: 0.9;
+font-weight: 500;
+}
+
+.header p {
+opacity: 0.9;
+font-size: 0.9rem;
+}
+
+/* Android-style Dropdown Menu */
+.menu-container {
+position: absolute;
+top: 20px;
+left: 20px;
+z-index: 100;
+}
+
+.hamburger-menu {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover {
+transform: scale(1.1);
+}
+
+.hamburger-icon {
+width: 18px;
+height: 14px;
+position: relative;
+transition: all 0.3s ease;
+}
+
+.hamburger-icon span {
+display: block;
+position: absolute;
+height: 2px;
+width: 100%;
+background: currentColor;
+border-radius: 1px;
+opacity: 1;
+left: 0;
+transition: all 0.3s ease;
+}
+
+.hamburger-icon span:nth-child(1) {
+top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+top: 6px;
+}
+
+.hamburger-icon span:nth-child(3) {
+top: 12px;
+}
+
+.hamburger-menu.active .hamburger-icon span:nth-child(1) {
+top: 6px;
+transform: rotate(135deg);
+}
+
+.hamburger-menu.active .hamburger-icon span:nth-child(2) {
+opacity: 0;
+left: -20px;
+}
+
+.hamburger-menu.active .hamburger-icon span:nth-child(3) {
+top: 6px;
+transform: rotate(-135deg);
+}
+
+/* Android-style Dropdown */
+.dropdown-menu {
+position: absolute;
+top: 50px;
+left: 0;
+min-width: 250px;
+border-radius: 8px;
+transform: translateY(-10px);
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+z-index: 200;
+}
+
+.dropdown-menu.active {
+transform: translateY(0);
+opacity: 1;
+visibility: visible;
+}
+
+.dropdown-item {
+padding: 12px 16px;
+cursor: pointer;
+transition: all 0.2s ease;
+display: flex;
+align-items: center;
+gap: 12px;
+font-weight: 500;
+font-size: 0.9rem;
+}
+
+.dropdown-item:first-child {
+border-radius: 8px 8px 0 0;
+}
+
+.dropdown-item:last-child {
+border-radius: 0 0 8px 8px;
+}
+
+.dropdown-item:only-child {
+border-radius: 8px;
+}
+
+.dropdown-divider {
+height: 1px;
+background: rgba(0, 0, 0, 0.1);
+margin: 4px 0;
+}
+
+/* New Theme Selection Design */
+.theme-submenu {
+cursor: default !important;
+flex-direction: column;
+align-items: flex-start;
+padding: 12px 16px 8px 16px;
+}
+
+.theme-submenu:hover {
+background: inherit !important;
+}
+
+.theme-header {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 8px;
+font-weight: 600;
+}
+
+.theme-grid-divider {
+width: 100%;
+height: 1px;
+margin: 8px 0;
+transition: border-color 0.3s ease;
+}
+
+.theme-grid {
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 8px;
+padding: 8px 0;
+}
+
+.theme-option {
+display: flex;
+align-items: center;
+gap: 8px;
+cursor: pointer;
+padding: 6px 8px;
+border-radius: 4px;
+transition: all 0.2s ease;
+font-size: 0.8rem;
+font-weight: 500;
+}
+
+.theme-option:hover {
+background: rgba(0, 0, 0, 0.05);
+}
+
+/* Color Bullet Theme Selectors */
+.theme-bullet {
+width: 16px;
+height: 16px;
+border-radius: 50%;
+border: 2px solid transparent;
+cursor: pointer;
+position: relative;
+transition: all 0.2s ease;
+flex-shrink: 0;
+}
+
+.theme-bullet:hover {
+transform: scale(1.1);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-bullet.active {
+border-color: #ffffff;
+box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+transform: scale(1.1);
+}
+
+.theme-bullet.active::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: #ffffff;
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Theme-specific bullet colors */
+.theme-bullet-default {
+background: linear-gradient(45deg, #4f85f4, #3b6aef);
+}
+
+.theme-bullet-dark {
+background: linear-gradient(45deg, #334155, #1e293b);
+}
+
+.theme-bullet-green {
+background: linear-gradient(45deg, #059669, #047857);
+}
+
+.theme-bullet-orange {
+background: linear-gradient(45deg, #f97316, #ea580c);
+}
+
+.theme-bullet-purple {
+background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+}
+
+.theme-bullet-rose {
+background: linear-gradient(45deg, #f43f5e, #e11d48);
+}
+
+/* Dropdown Overlay */
+.dropdown-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: 99;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+}
+
+.dropdown-overlay.active {
+opacity: 1;
+visibility: visible;
+}
+
+/* About Modal */
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: 999;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+opacity: 1;
+visibility: visible;
+}
+
+.about-modal {
+max-width: 450px;
+width: 100%;
+border-radius: 16px;
+padding: 30px;
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+transform: scale(0.9) translateY(20px);
+transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+position: relative;
+text-align: center;
+}
+
+.modal-overlay.active .about-modal {
+transform: scale(1) translateY(0);
+}
+
+.close-modal-btn {
+position: absolute;
+top: 15px;
+right: 15px;
+background: none;
+border: none;
+font-size: 24px;
+cursor: pointer;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.2s ease;
+}
+
+.close-modal-btn:hover {
+background: rgba(0, 0, 0, 0.1);
+transform: scale(1.1);
+}
+
+.about-title {
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.about-subtitle {
+font-size: 1.2rem;
+font-weight: 600;
+margin-bottom: 20px;
+opacity: 0.8;
+}
+
+.about-content {
+font-size: 1rem;
+line-height: 1.6;
+margin-bottom: 25px;
+font-weight: 400;
+}
+
+.developers {
+padding: 20px;
+border-radius: 12px;
+font-weight: 600;
+font-size: 1.1rem;
+border: 2px solid transparent;
+transition: all 0.3s ease;
+}
+
+/* Main Content */
+.converter {
+padding: 30px 20px;
+}
+
+.input-group {
+margin-bottom: 25px;
+}
+
+label {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+transition: color 0.3s ease;
+}
+
+/* Input Wrapper with Copy Button */
+.input-wrapper {
+position: relative;
+border-radius: 10px;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+}
+
+input {
+width: 100%;
+padding: 15px 50px 15px 15px;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+font-family: 'Vazirmatn', sans-serif;
+transition: all 0.3s ease;
+text-align: center;
+direction: ltr;
+outline: none;
+}
+
+.copy-btn {
+position: absolute;
+left: 10px;
+top: 50%;
+transform: translateY(-50%);
+background: none;
+border: none;
+padding: 8px;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.2s ease;
+font-size: 16px;
+z-index: 2;
+}
+
+.copy-btn:hover {
+transform: translateY(-50%) scale(1.1);
+}
+
+.copy-btn:active {
+transform: translateY(-50%) scale(0.95);
+}
+
+/* Copy Success Animation */
+@keyframes copySuccess {
+0% { transform: translateY(-50%) scale(1); }
+50% { transform: translateY(-50%) scale(1.2); }
+100% { transform: translateY(-50%) scale(1); }
+}
+
+.copy-btn.success {
+animation: copySuccess 0.3s ease;
+}
+
+.result {
+padding: 20px;
+border-radius: 10px;
+margin-top: 20px;
+transition: all 0.3s ease;
+}
+
+.result-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
+
+.result-item:last-child {
+border-bottom: none;
+}
+
+.result-label {
+font-weight: 600;
+transition: color 0.3s ease;
+}
+
+.result-value {
+font-size: 1.1rem;
+font-weight: 700;
+transition: color 0.3s ease;
+direction: rtl;
+}
+
+.formula-info {
+padding: 20px;
+margin-top: 20px;
+border-radius: 10px;
+transition: all 0.3s ease;
+}
+
+.formula-info h3 {
+margin-bottom: 10px;
+font-weight: 700;
+transition: color 0.3s ease;
+}
+
+.formula-info p {
+line-height: 1.6;
+font-size: 0.9rem;
+font-weight: 400;
+transition: color 0.3s ease;
+}
+
+.clear-btn {
+width: 100%;
+padding: 12px;
+background: #6c757d;
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 14px;
+font-family: 'Vazirmatn', sans-serif;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+background: #5a6268;
+transform: translateY(-1px);
+}
+
+.install-prompt {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #4f85f4;
+color: white;
+padding: 15px 20px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+cursor: pointer;
+display: none;
+z-index: 1000;
+font-family: 'Vazirmatn', sans-serif;
+font-weight: 500;
+}
+
+.number-input {
+direction: ltr;
+text-align: right;
+}
+
+/* Toast Notification for Copy */
+.copy-toast {
+position: fixed;
+top: 20px;
+left: 50%;
+transform: translateX(-50%) translateY(-100px);
+background: #10b981;
+color: white;
+padding: 12px 24px;
+border-radius: 8px;
+font-weight: 500;
+z-index: 9999;
+opacity: 0;
+transition: all 0.3s ease;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.copy-toast.show {
+transform: translateX(-50%) translateY(0);
+opacity: 1;
+}
+
+@media (max-width: 480px) {
+.container {
+margin: 10px;
+border-radius: 15px;
+}
+
+.header {
+padding: 20px 15px 15px 15px;
+}
+
+.header h1 {
+font-size: 1.6rem;
+}
+
+.converter {
+padding: 20px 15px;
+}
+
+.dropdown-menu {
+min-width: 280px;
+}
+
+.theme-grid {
+grid-template-columns: 1fr 1fr;
+gap: 6px;
+}
+
+.theme-option {
+font-size: 0.75rem;
+padding: 4px 6px;
+}
+
+.theme-bullet {
+width: 14px;
+height: 14px;
+}
+
+.theme-bullet.active::after {
+width: 4px;
+height: 4px;
+}
+
+input {
+padding: 15px 45px 15px 15px;
+}
+
+.copy-btn {
+left: 8px;
+font-size: 14px;
+padding: 6px;
+}
+
+.about-modal {
+padding: 25px;
+margin: 10px;
+}
+
+.about-title {
+font-size: 1.7rem;
+}
+
+.about-subtitle {
+font-size: 1.1rem;
+}
+
+.about-content {
+font-size: 0.95rem;
+}
+
+.developers {
+font-size: 1rem;
+padding: 18px;
+}
+}
+</style>
+</head>
+<body class="theme-default">
+<!-- Theme Loading Animation Overlay -->
+<div class="theme-loading-overlay" id="themeLoadingOverlay"></div>
+
+<!-- Dropdown Overlay -->
+<div class="dropdown-overlay" id="dropdownOverlay" onclick="closeDropdown()"></div>
+
+<!-- About Modal -->
+<div class="modal-overlay" id="aboutModal" onclick="closeAboutModal(event)">
+<div class="about-modal">
+<button class="close-modal-btn" onclick="closeAboutModal()">×</button>
+<div class="about-title">
+💰 قرون
+</div>
+<div class="about-subtitle">
+Gheroon | قرون
+</div>
+<div class="about-content">
+تبدیل آسان و سریع واحدهای پولی ایران<br>
+ریال، تومان و قران را به هم تبدیل کنید
+</div>
+<div class="developers">
+Developed by: Babak & Taha
+</div>
+</div>
+</div>
+
+<!-- Copy Toast -->
+<div class="copy-toast" id="copyToast">مقدار کپی شد! 📋</div>
+
+<div class="container">
+<div class="header">
+<!-- Android-style Dropdown Menu -->
+<div class="menu-container">
+<button class="hamburger-menu" id="hamburgerMenu" onclick="toggleDropdown()">
+<div class="hamburger-icon">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</button>
+
+<div class="dropdown-menu" id="dropdownMenu">
+<div class="dropdown-item">
+<span>🏠</span>
+<span>صفحه اصلی</span>
+</div>
+
+<div class="dropdown-divider"></div>
+
+<div class="dropdown-item theme-submenu">
+<div class="theme-header">
+<span>🎨</span>
+<span>انتخاب پوسته</span>
+</div>
+<div class="theme-grid-divider"></div>
+<div class="theme-grid">
+<div class="theme-option" onclick="selectTheme('default', event)">
+<div class="theme-bullet theme-bullet-default active" data-theme="default"></div>
+<span>آبی</span>
+</div>
+<div class="theme-option" onclick="selectTheme('dark', event)">
+<div class="theme-bullet theme-bullet-dark" data-theme="dark"></div>
+<span>تاریک</span>
+</div>
+<div class="theme-option" onclick="selectTheme('green', event)">
+<div class="theme-bullet theme-bullet-green" data-theme="green"></div>
+<span>سبز</span>
+</div>
+<div class="theme-option" onclick="selectTheme('orange', event)">
+<div class="theme-bullet theme-bullet-orange" data-theme="orange"></div>
+<span>نارنجی</span>
+</div>
+<div class="theme-option" onclick="selectTheme('purple', event)">
+<div class="theme-bullet theme-bullet-purple" data-theme="purple"></div>
+<span>بنفش</span>
+</div>
+<div class="theme-option" onclick="selectTheme('rose', event)">
+<div class="theme-bullet theme-bullet-rose" data-theme="rose"></div>
+<span>صورتی</span>
+</div>
+</div>
+</div>
+
+<div class="dropdown-divider"></div>
+
+<div class="dropdown-item" onclick="openAboutModal()">
+<span>ℹ️</span>
+<span>درباره ما</span>
+</div>
+</div>
+</div>
+
+<h1>قرون</h1>
+<div class="subtitle">تبدیل واحد پول ایران</div>
+<p>ریال ← تومان ← قران</p>
+</div>
+
+<div class="converter">
+<div class="input-group">
+<label for="rial">ریال:</label>
+<div class="input-wrapper">
+<input type="text" id="rial" class="number-input" placeholder="مبلغ را وارد کنید" value="۰">
+<button class="copy-btn" onclick="copyValue('rial')" title="کپی مقدار">📋</button>
+</div>
+</div>
+
+<div class="input-group">
+<label for="toman">تومان:</label>
+<div class="input-wrapper">
+<input type="text" id="toman" class="number-input" placeholder="مبلغ را وارد کنید" value="۰">
+<button class="copy-btn" onclick="copyValue('toman')" title="کپی مقدار">📋</button>
+</div>
+</div>
+
+<div class="input-group">
+<label for="gheran">قران:</label>
+<div class="input-wrapper">
+<input type="text" id="gheran" class="number-input" placeholder="مبلغ را وارد کنید" value="۰">
+<button class="copy-btn" onclick="copyValue('gheran')" title="کپی مقدار">📋</button>
+</div>
+</div>
+
+<button class="clear-btn" onclick="clearAll()">پاک کردن</button>
+
+<div class="result" id="result">
+<div class="result-item">
+<span class="result-label">ریال:</span>
+<span class="result-value" id="resultRial">۰</span>
+</div>
+<div class="result-item">
+<span class="result-label">تومان:</span>
+<span class="result-value" id="resultToman">۰</span>
+</div>
+<div class="result-item">
+<span class="result-label">قران:</span>
+<span class="result-value" id="resultGheran">۰</span>
+</div>
+</div>
+
+<div class="formula-info">
+<h3>فرمول تبدیل:</h3>
+<p>
+- ۱۰،۰۰۰ ریال = ۱ تومان<br>
+- ۱ تومان = ۱۰۰ قران<br>
+- ۱۰۰ ریال = ۱ قران
+</p>
+</div>
+</div>
+</div>
+
+<div class="install-prompt" id="installPrompt" onclick="installApp()">
+📱 نصب اپلیکیشن
+</div>
+
+<script>
+// Theme Management with Instant Change
+let currentTheme = 'default';
+let isDropdownOpen = false;
+let isAboutModalOpen = false;
+
+// Persian number conversion
+function toPersianNumbers(str) {
+const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+return str.toString().replace(/\d/g, (digit) => persianNumbers[parseInt(digit)]);
+}
+
+function toEnglishNumbers(str) {
+const englishNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+
+let result = str;
+for (let i = 0; i < persianNumbers.length; i++) {
+result = result.replace(new RegExp(persianNumbers[i], 'g'), englishNumbers[i]);
+}
+return result;
+}
+
+// Copy functionality with English values
+function copyValue(fieldId) {
+const input = document.getElementById(fieldId);
+const persianValue = input.value;
+
+// Convert Persian separators and numbers to English
+const englishValue = toEnglishNumbers(persianValue).replace(/،/g, ',');
+
+// Copy to clipboard
+navigator.clipboard.writeText(englishValue).then(() => {
+// Show success animation
+const copyBtn = input.parentElement.querySelector('.copy-btn');
+copyBtn.classList.add('success');
+
+// Show toast
+showCopyToast();
+
+// Remove animation class
+setTimeout(() => {
+copyBtn.classList.remove('success');
+}, 300);
+}).catch(err => {
+console.error('Failed to copy: ', err);
+// Fallback for older browsers
+const textArea = document.createElement('textarea');
+textArea.value = englishValue;
+document.body.appendChild(textArea);
+textArea.select();
+try {
+document.execCommand('copy');
+showCopyToast();
+
+const copyBtn = input.parentElement.querySelector('.copy-btn');
+copyBtn.classList.add('success');
+setTimeout(() => {
+copyBtn.classList.remove('success');
+}, 300);
+} catch (err) {
+console.error('Fallback copy failed: ', err);
+}
+document.body.removeChild(textArea);
+});
+}
+
+// Show copy success toast
+function showCopyToast() {
+const toast = document.getElementById('copyToast');
+toast.classList.add('show');
+
+setTimeout(() => {
+toast.classList.remove('show');
+}, 2000);
+}
+
+function selectTheme(theme, event) {
+if (theme === currentTheme) return;
+
+// Instantly change theme without hiding elements
+document.body.className = `theme-${theme}`;
+currentTheme = theme;
+
+// Update active bullet
+document.querySelectorAll('.theme-bullet').forEach(bullet => bullet.classList.remove('active'));
+event.currentTarget.querySelector('.theme-bullet').classList.add('active');
+
+// Save theme preference
+localStorage.setItem('currencyConverterTheme', theme);
+
+// Optional: Show subtle top-to-bottom animation (very fast)
+const overlay = document.getElementById('themeLoadingOverlay');
+overlay.className = `theme-loading-overlay theme-${theme}`;
+overlay.classList.add('animate');
+
+setTimeout(() => {
+overlay.classList.remove('animate');
+}, 300);
+}
+
+// Android-style Dropdown Management
+function toggleDropdown() {
+const dropdown = document.getElementById('dropdownMenu');
+const overlay = document.getElementById('dropdownOverlay');
+const hamburger = document.getElementById('hamburgerMenu');
+
+if (isDropdownOpen) {
+closeDropdown();
+} else {
+dropdown.classList.add('active');
+overlay.classList.add('active');
+hamburger.classList.add('active');
+isDropdownOpen = true;
+}
+}
+
+function closeDropdown() {
+const dropdown = document.getElementById('dropdownMenu');
+const overlay = document.getElementById('dropdownOverlay');
+const hamburger = document.getElementById('hamburgerMenu');
+
+dropdown.classList.remove('active');
+overlay.classList.remove('active');
+hamburger.classList.remove('active');
+isDropdownOpen = false;
+}
+
+// About Modal Management
+function openAboutModal() {
+const modal = document.getElementById('aboutModal');
+modal.classList.add('active');
+isAboutModalOpen = true;
+closeDropdown(); // Close dropdown when opening modal
+}
+
+function closeAboutModal(event) {
+// Don't close if clicking inside the modal content
+if (event && event.target.closest('.about-modal') && event.target !== event.currentTarget) {
+return;
+}
+
+const modal = document.getElementById('aboutModal');
+modal.classList.remove('active');
+isAboutModalOpen = false;
+}
+
+// Close dropdown/modal with Escape key
+document.addEventListener('keydown', function(event) {
+if (event.key === 'Escape') {
+if (isAboutModalOpen) {
+closeAboutModal();
+} else if (isDropdownOpen) {
+closeDropdown();
+}
+}
+});
+
+// Load saved theme
+function loadTheme() {
+const savedTheme = localStorage.getItem('currencyConverterTheme') || 'default';
+document.body.className = `theme-${savedTheme}`;
+currentTheme = savedTheme;
+
+// Update active bullet
+document.querySelectorAll('.theme-bullet').forEach(bullet => bullet.classList.remove('active'));
+const activeBullet = document.querySelector(`[data-theme="${savedTheme}"]`);
+if (activeBullet) {
+activeBullet.classList.add('active');
+}
+}
+
+// Number formatting with Persian separators and numbers
+function formatNumber(num) {
+if (num === 0 || num === '0' || !num) return '۰';
+
+// Format with English separators first
+const formatted = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+// Convert to Persian numbers and separators
+return toPersianNumbers(formatted).replace(/,/g, '،');
+}
+
+function parseNumber(str) {
+if (!str || str === '۰' || str === '0') return 0;
+
+// Convert Persian to English and remove separators
+const englishStr = toEnglishNumbers(str).replace(/،/g, '').replace(/,/g, '');
+return parseFloat(englishStr);
+}
+
+function formatInputValue(input, value) {
+if (value === 0 || value === '0' || !value) {
+input.value = '۰';
+return;
+}
+
+// Format with Persian separators and numbers
+const formatted = formatNumber(value);
+input.value = formatted;
+}
+
+// PWA Installation
+let deferredPrompt;
+const installPrompt = document.getElementById('installPrompt');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+e.preventDefault();
+deferredPrompt = e;
+installPrompt.style.display = 'block';
+});
+
+function installApp() {
+if (deferredPrompt) {
+deferredPrompt.prompt();
+deferredPrompt.userChoice.then((choiceResult) => {
+if (choiceResult.outcome === 'accepted') {
+installPrompt.style.display = 'none';
+}
+deferredPrompt = null;
+});
+}
+}
+
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+const swContent = `
+const CACHE_NAME = 'gheroon-v1';
+const urlsToCache = ['/'];
+
+self.addEventListener('install', (event) => {
+event.waitUntil(
+caches.open(CACHE_NAME)
+.then((cache) => cache.addAll(urlsToCache))
+);
+});
+
+self.addEventListener('fetch', (event) => {
+event.respondWith(
+caches.match(event.request)
+.then((response) => {
+return response || fetch(event.request);
+})
+);
+});
+`;
+
+const blob = new Blob([swContent], { type: 'application/javascript' });
+const swUrl = URL.createObjectURL(blob);
+
+navigator.serviceWorker.register(swUrl)
+.then((registration) => {
+console.log('SW registered: ', registration);
+})
+.catch((registrationError) => {
+console.log('SW registration failed: ', registrationError);
+});
+});
+}
+
+// Currency Conversion Functions
+function showResults(rial, toman, gheran) {
+// Convert to Persian numbers with separators and add currency labels
+const rialFormatted = formatNumber(rial) + ' ریال';
+const tomanFormatted = formatNumber(toman) + ' تومان';
+const gheranFormatted = formatNumber(gheran) + ' قران';
+
+document.getElementById('resultRial').textContent = rialFormatted;
+document.getElementById('resultToman').textContent = tomanFormatted;
+document.getElementById('resultGheran').textContent = gheranFormatted;
+}
+
+function clearAll() {
+document.getElementById('rial').value = '۰';
+document.getElementById('toman').value = '۰';
+document.getElementById('gheran').value = '۰';
+showResults(0, 0, 0);
+}
+
+// Real-time conversion with new formula: 10000 ریال = 1 تومان = 100 قران
+document.getElementById('rial').addEventListener('input', function() {
+let value = parseNumber(this.value);
+
+if (value === 0 || isNaN(value)) {
+formatInputValue(document.getElementById('rial'), 0);
+formatInputValue(document.getElementById('toman'), 0);
+formatInputValue(document.getElementById('gheran'), 0);
+showResults(0, 0, 0);
+} else {
+const rial = value;
+const toman = rial / 10000;
+const gheran = rial / 100;
+
+formatInputValue(this, rial);
+formatInputValue(document.getElementById('toman'), toman);
+formatInputValue(document.getElementById('gheran'), gheran);
+showResults(rial, toman, gheran);
+}
+});
+
+document.getElementById('toman').addEventListener('input', function() {
+let value = parseNumber(this.value);
+
+if (value === 0 || isNaN(value)) {
+formatInputValue(document.getElementById('rial'), 0);
+formatInputValue(document.getElementById('toman'), 0);
+formatInputValue(document.getElementById('gheran'), 0);
+showResults(0, 0, 0);
+} else {
+const toman = value;
+const rial = toman * 10000;
+const gheran = toman * 100;
+
+formatInputValue(document.getElementById('rial'), rial);
+formatInputValue(this, toman);
+formatInputValue(document.getElementById('gheran'), gheran);
+showResults(rial, toman, gheran);
+}
+});
+
+document.getElementById('gheran').addEventListener('input', function() {
+let value = parseNumber(this.value);
+
+if (value === 0 || isNaN(value)) {
+formatInputValue(document.getElementById('rial'), 0);
+formatInputValue(document.getElementById('toman'), 0);
+formatInputValue(document.getElementById('gheran'), 0);
+showResults(0, 0, 0);
+} else {
+const gheran = value;
+const rial = gheran * 100;
+const toman = gheran / 100;
+
+formatInputValue(document.getElementById('rial'), rial);
+formatInputValue(document.getElementById('toman'), toman);
+formatInputValue(this, gheran);
+showResults(rial, toman, gheran);
+}
+});
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+loadTheme();
+showResults(0, 0, 0);
+});
+</script>
+</body>
+</html>
