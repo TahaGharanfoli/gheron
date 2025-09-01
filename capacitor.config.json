@@ -1,5 +1,8 @@
 {
-  "appId": "com.tabak.gheron",
-  "appName": "Gheron",
-  "webDir": "www"
+  "appId": "com.goodza.gheroon",
+  "appName": "قرون",
+  "webDir": "www",
+  "server": {
+		"url": "file:///android_asset/public/index.html"
+   }
 }

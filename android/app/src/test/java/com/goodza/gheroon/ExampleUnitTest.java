@@ -1,4 +1,4 @@
-package com.getcapacitor.myapp;
+package com.goodza.gheroon;
 
 import static org.junit.Assert.*;
 

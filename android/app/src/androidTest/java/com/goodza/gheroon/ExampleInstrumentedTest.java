@@ -1,4 +1,4 @@
-package com.getcapacitor.myapp;
+package com.goodza.gheroon;
 
 import static org.junit.Assert.*;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.tabak.gheron", appContext.getPackageName());
+        assertEquals("com.goodza.gheroon", appContext.getPackageName());
     }
 }

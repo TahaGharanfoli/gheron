@@ -1,4 +1,4 @@
-package com.tabak.gheron;
+package com.goodza.gheroon;
 
 import android.os.Bundle;
 import android.webkit.WebView;

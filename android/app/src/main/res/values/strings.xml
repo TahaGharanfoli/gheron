@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Gheron</string>
-    <string name="title_activity_main">Gheron</string>
-    <string name="package_name">com.tabak.gheron</string>
-    <string name="custom_url_scheme">com.tabak.gheron</string>
+    <string name="app_name">قرون</string>
+    <string name="title_activity_main">قرون</string>
+    <string name="package_name">com.goodza.gheroon</string>
+    <string name="custom_url_scheme">com.goodza.gheroon</string>
 </resources>
